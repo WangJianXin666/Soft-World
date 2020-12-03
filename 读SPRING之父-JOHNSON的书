@@ -1,0 +1,26 @@
+<<EXPERT ONE-ON-ONE J2EE DESIGN AND DEVELOPMENT>>
+
+In this book I aim to help professional J2EE developers and architects make the appropriate choices to deliver high-quality solutions on time and within budget. 
+ -在书的第一章，约翰生就开章名义的说明这本书旨在于帮助专业的J2EE开发者和架构师选择正确的决定，去及时和有效的传递高质量的方案。
+ 
+ In this chapter, we discuss the high-level choices in developing a J2EE architecture,
+ and how to decidewhich parts of J2EE to use to solve real problems.
+ We'll look at:
+ ❑Distributed and non-distributed applications, and how to choose which model is appropriate
+ ❑The implications for J2EE design of changes in the EJB 2.0 specification and the emergence of web services
+ ❑When to use EJB⑴
+ ❑Data access strategies for J2EE applications
+ ❑Four J2EE architectures, and how to choose between them
+ ❑Web tier design❑Portability issues
+ 
+ - 具体解决的真实的问题有
+ 1.分布式和非分布式的应用以及如何选择哪一个模式更合适
+ 2.
+ 3.何时使用EJB
+ 
+ 
+ 
+ ⑴ (EJB; formerly Enterprise JavaBeans)，is one of several Java APIs for modular construction of enterprise software. 
+ EJB is a server-side software component that encapsulates business logic of an application. 
+ The EJB specification was originally developed in 1997 by IBM and later adopted by Sun Microsystems (EJB 1.0 and 1.1) in 1999[2] 
+ and enhanced under the Java Community Process as JSR 19 (EJB 2.0), JSR 153 (EJB 2.1), JSR 220 (EJB 3.0), JSR 318 (EJB 3.1) and JSR 345 (EJB 3.2).

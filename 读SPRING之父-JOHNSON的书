@@ -11,16 +11,110 @@ In this book I aim to help professional J2EE developers and architects make the 
  ❑When to use EJB⑴
  ❑Data access strategies for J2EE applications
  ❑Four J2EE architectures, and how to choose between them
- ❑Web tier design❑Portability issues
+ ❑Web tier design
+ ❑Portability issues
  
  - 具体解决的真实的问题有
- 1.分布式和非分布式的应用以及如何选择哪一个模式更合适
+ 1.分布式和非分布式的应用以及如何选择哪一个模式更合适Be performant and scalable
  2.
  3.何时使用EJB
+ 4.J2EE应用的数据接受策略
+ 5.四个J2EE架构，如何选择
+ 6.Web层级涉及
+ 7.轻量级的问题
  
+ In particular, the message I'll try to get across will be that we should apply J2EE to
+ realize OO design, not let J2EE technologies dictate object design.⑵
+ - 尤其是，我想传达的信息是我们应该应用J2EE去实现面向对象涉及，而不是让J2EE技术决定面向对象设计。
  
+ A well-designed J2EE application should meet the following goals. Note that while we're focusing on
+J2EE-based solutions, these goals apply to all enterprise applications:
+ - 一个设计良好的J2EE应用应该满足如下目的。注意当我们关注于基于J2EE的解决方案时，这些目的可以应用于所有企业级应用。
+ 1.Be robust 健壮的
+ Enterprise software is important to an organization. Its users expect it to be reliable and bugfree. Hence we must understand and take advantage of those parts of J2EE that can help us
+ build robust solutions and must ensure that we write quality code.
+  
+ 2.Be performant and scalable 性能良好，可扩展
+ Enterprise applications must meet the performance expectations of their users. They must also
+exhibit sufficient scalability – the potential for an application to support increased load, given
+appropriate hardware. Scalability is a particularly important consideration for Internet
+applications, for which it is difficult to predict user numbers and behavior. Understanding the
+J2EE infrastructure is essential for meeting both these goals. Scalability will typically require
+deploying multiple server instances in a cluster. Clustering is a complex problem requiring
+sophisticated application server functionality. We must ensure that our applications are
+designed so that operation in a cluster is efficient.
+ 企业级应用必须满足用户对应用表现的期望。它还必须表现出足够的可扩展性-支持应用潜在的增长需求，给予适当的硬件。
+ 可扩展性对于互联网产品来说是一个极其重要需要考虑的地方，因为很难预测用户数量和用户行为。
+ 满足如上两个需求理解J2EE的基础设施是必要的。可扩展性通常的需要部署集群中的多个服务器实例。
+ 集群实一个复杂的问题需要成熟的应用服务器功能。
+ 我们必须保证我们的应用是设计成能满足一个集群的操作。
  
+3. Take advantage of OO design principles
+ OO design principles offer proven benefits for complex systems. Good OO design practice is
+promoted by the use of proven design patterns- – recurring solutions to common problems.
+The concept of design patterns was popularized in OO software development by the classic
+book Design Patterns: Elements of Reusable Object-Oriented Software from Addison Wesley, (ISBN 0-
+201-63361-2), which describes 23 design patterns with wide applicability. These patterns are
+not technology-specific or language-specific.
+It's vital that we use J2EE to implement OO designs, rather than let our use of J2EE dictate
+object design. Today there's a whole "J2EE patterns" industry. While many "J2EE patterns"
+are valuable, classic (non-technology-specific) design patterns are more so, and still highly
+relevant to J
+面向对象原理为复杂的系统提供了可见的好处。好的面向对象设计实践是通过设计模式提升的 - 对于常见的问题有循环的解决方案。
+设计模式的思想 被追棒 再面向对象软件开发 是因为经典书籍设计模式 《Elements of Reusable Object-Oriented Software》 Addison wesley。
+在这本书例描述了23种可应用的设计模式。
+
+
+4. Avoid unnecessary complexity 避免不必要的复杂性
+Practitioners of Extreme Programming (XP) advocate doing "the simplest thing that could
+possibly work". We should be wary of excessive complexity that may indicate that an
+application architecture isn't working. Due to the range of components on offer, it's tempting
+to over-engineer J2EE solutions, accepting greater complexity for capabilities irrelevant to the
+business requirements. Complexity adds to costs throughout the software lifecycle and thus
+can be a serious problem. On the other hand, thorough analysis must ensure that we don't
+have a naïve and simplistic view of requirements.
+XP的从业者主张“用最简单的事做可能的事”。我们应该谨慎有可能导致应用架构不可用的过度的复杂性。
+
+5.Be maintainable and extensible 可维护可扩展
+Maintenance is by far the most expensive phase of the software lifecycle. It's particularly
+important to consider maintainability when designing J2EE solutions, because adopting
+J2EE is a strategic choice. J2EE applications are likely to be a key part of an organization's
+software mix for years, and must be able to accommodate new business needs.
+Maintainability and extensibility depend largely on clean design. We need to ensure that
+each component of the application has a clear responsibility, and that maintenance is not
+hindered by tightly-coupled components.
+维护是目前软件生命周期种最昂贵的一段。
+因为选择J2EE是一个策略性的选择,设计J2EE方案时考虑可维护性是极为重要的。
+
+6.Be delivered on time  及时交付
+Productivity is a vital consideration, which is too often neglected when approaching J2EE.
+生产力是很关键的，这一点经常的被忽视。
+
+
+7.Be easy to test  方便测试
+Testing is an essential activity throughout the software lifecycle. We should consider the
+implications of design decisions for ease of testing.
+
+8.Promote reuse  促进复用
+Enterprise software must fit into an organization's long term strategy. Thus it's important to
+foster reuse, so that code duplication is minimized (within and across projects) and investment
+leveraged to the full. Code reuse usually results from good OO design practice, while we
+should also consistently use valuable infrastructure provided by the application server where it
+simplifies application code.
+企业级的软件必须适合企业的长期发展策略。
+因此培养复用是很重要的，那样就可以保证代码最小化重复（在项目中或项目外）。
+investment
+leveraged to the full？
+良好的代码复用通常是因为良好的面向对向设计。
+
+
+
+
  ⑴ (EJB; formerly Enterprise JavaBeans)，is one of several Java APIs for modular construction of enterprise software. 
  EJB is a server-side software component that encapsulates business logic of an application. 
  The EJB specification was originally developed in 1997 by IBM and later adopted by Sun Microsystems (EJB 1.0 and 1.1) in 1999[2] 
  and enhanced under the Java Community Process as JSR 19 (EJB 2.0), JSR 153 (EJB 2.1), JSR 220 (EJB 3.0), JSR 318 (EJB 3.1) and JSR 345 (EJB 3.2).
+EJB 就是将那些"类"放到一个服务器上，用C/S 形式的软件客户端对服务器上的"类"进行调用。
+⑵ (J2EE) J2EE is a platform-independent, Java-centric environment from Sun for developing,
+building and deploying Web-based enterprise applications online. The J2EE platform consists of a set of services, APIs,
+and protocols that provide the functionality for developing multitiered, Web-based applications.

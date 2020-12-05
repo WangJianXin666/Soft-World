@@ -14,8 +14,8 @@ Swagger Inspector provides capabilities to easily inspect API request-responses,
 1、分担 Web 服务器的 I/O 负载 - 将耗费资源的图片服务分离出来，提高服务器的性能和稳定性
 2、能够专门对图片服务器进行优化 - 为图片服务设置有针对性的缓存方案，减少带宽成本，提高访问速度
 3、提高网站的可扩展性 - 通过增加图片服务器，提高图片吞吐能力
-
-Nginx反转代理
-Proxying is typically used to distribute the load among several servers,
-seamlessly show content from different websites, or pass requests for processing to application servers over protocols other than HTTP.
-反向代理经常用于在几个服务器分发负载,从不同的web网站显示内容或  传递请求  为了处理 
+4、还要很重要的一点是备份
+There's loads to think about when picking the best online photo storage for your images. 
+How much space do you need? Do you need to store RAW files or will JPEGs do? 
+Do you want other people to be able to browse your images, or are they just for you? 
+And, of course, are you looking for a free service, or are you willing to spend a monthly or yearly fee to get the storage you need.

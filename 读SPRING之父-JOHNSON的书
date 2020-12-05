@@ -118,3 +118,12 @@ EJB 就是将那些"类"放到一个服务器上，用C/S 形式的软件客户�
 ⑵ (J2EE) J2EE is a platform-independent, Java-centric environment from Sun for developing,
 building and deploying Web-based enterprise applications online. The J2EE platform consists of a set of services, APIs,
 and protocols that provide the functionality for developing multitiered, Web-based applications.
+
+
+Deciding Whether to Use a Distributed Architecture ⑶
+
+⑶In distributed architecture, components are presented on different platforms and several components can cooperate with one another
+over a communication network in order to achieve a specific objective or goal.
+在分布式架构中，组件可以在不同的平台上展示还有几个组件为了达到一个特殊的目的可以通过网络沟通共同协作。
+
+

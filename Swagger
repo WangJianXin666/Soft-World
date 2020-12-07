@@ -1,0 +1,39 @@
+(二)开始项目
+
+首先，你需要一个带有一些Rest Controller的Spring Boot应用程序，我在这里准备了一个简单的。
+
+三)添加依赖项
+
+要在项目中使用SpringFox，您需要先将其添加为依赖项。如果您使用的是Maven，则可以使用以下内容（您可以检查是否有更新的版本）。
+
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger2</artifactId>
+    <version>2.9.2</version>
+</dependency>
+
+
+(四)基本配置
+
+添加依赖项后，您需要提供一些基本的Spring配置。虽然您可以在技术上使用现有配置文件之一，但最好为其配置单独的文件。您需要提供的第一件事是@ EnableSwagger2注释。然后你需要提供一个Docket bean，它是用于配置SpringFox的主bean。
+
+@Configuration
+@EnableSwagger2
+public class SpringFoxConfig {
+    @Bean
+    public Docket apiDocket() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any())
+                .build();
+    }
+}
+
+
+
+4、配置为哪部分接口生成API文档
+主要是在Swagger2Config配置类中进行createRestApi()方法中进行配置，下面提供四种配置：
+①为任何接口生成API文档，这种方式不必在接口方法上加任何注解，方便的同时也会因为没有添加任何注解所以生成的API文档也没有注释，可读性不高。
+
+@Bean
